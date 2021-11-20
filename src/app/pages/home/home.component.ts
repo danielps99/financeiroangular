@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { TituloService } from 'src/app/shared/services/titulo.service';
+import { TituloService } from 'src/app/services/titulo.service';
 
 @Component({
   selector: 'app-home',

@@ -9,7 +9,7 @@ import { ReceberParceladoComponent } from './pages/receber-parcelado/receber-par
 import { ConfiguracaoComponent } from './pages/configuracao/configuracao.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent},
+  { path: '', component: HomeComponent},
   { path: 'pagar', component: PagarComponent},
   { path: 'receber', component: ReceberComponent},
   { path: 'pagar-parcelado', component: PagarParceladoComponent},
