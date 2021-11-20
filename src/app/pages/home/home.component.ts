@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import ResponseQuery from 'src/app/models/responses/ResponseQuery';
 import { TituloService } from 'src/app/services/titulo.service';
+import Titulo from '../../models/Titulo'
 
 @Component({
   selector: 'app-home',
@@ -9,13 +11,13 @@ import { TituloService } from 'src/app/services/titulo.service';
 })
 export class HomeComponent implements OnInit {
 
-  titulos$! :Observable<any[]>;
+  titulos!: Titulo[];
 
   constructor(private tituloService: TituloService) { }
 
   ngOnInit(): void {
-    this.titulos$ = this.tituloService.buscarTitulos(1);
-    this.tituloService.buscarTitulos(1).subscribe((e) => console.log(e));
+    this.tituloService.buscarTitulos(1).subscribe(
+      (r) => this.titulos = r.data      
+    );
   }
-
 }

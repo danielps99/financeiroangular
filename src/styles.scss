@@ -1,6 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 // Customizations Here (Optional)
-$warning: purple;
+$success: #81ecec;
+$warning: #fab1a0;
 
 // @import "~bulma/css/bulma.css";
 @import "~bulma/bulma";
+
+.listrado{
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    background-color: #efefef;
+}
