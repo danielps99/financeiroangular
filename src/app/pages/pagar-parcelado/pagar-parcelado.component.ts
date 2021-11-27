@@ -5,11 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './pagar-parcelado.component.html',
   styleUrls: ['./pagar-parcelado.component.scss']
 })
-export class PagarParceladoComponent implements OnInit {
+export class PagarParceladoComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

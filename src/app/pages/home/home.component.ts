@@ -1,6 +1,4 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
-import ResponseQuery from 'src/app/models/responses/ResponseQuery';
 import { TituloService } from 'src/app/services/titulo.service';
 import Titulo from '../../models/Titulo';
 import { isBottomOfWindow } from '../../shared/UtilWindow';

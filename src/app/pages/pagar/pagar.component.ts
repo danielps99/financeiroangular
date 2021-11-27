@@ -5,11 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './pagar.component.html',
   styleUrls: ['./pagar.component.scss']
 })
-export class PagarComponent implements OnInit {
+export class PagarComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
