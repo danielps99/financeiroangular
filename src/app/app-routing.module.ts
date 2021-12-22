@@ -11,7 +11,9 @@ import { ConfiguracaoComponent } from './pages/configuracao/configuracao.compone
 const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'pagar', component: PagarComponent},
+  { path: 'pagar/:id', component: PagarComponent},
   { path: 'receber', component: ReceberComponent},
+  { path: 'receber/:id', component: ReceberComponent},
   { path: 'pagar-parcelado', component: PagarParceladoComponent},
   { path: 'receber-parcelado', component: ReceberParceladoComponent},
   { path: 'sobre', component: SobreComponent},

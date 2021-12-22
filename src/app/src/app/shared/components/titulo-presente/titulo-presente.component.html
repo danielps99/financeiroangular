@@ -1,0 +1,57 @@
+<div class="content m-3">
+  <h1 class="is-size-4 has-text-centered has-text-weight-bold">{{ titulo.operacao }}</h1>
+  <form>
+    <div class="field">
+      <label class="label">Vencimento</label>
+      <div class="control">
+        <input name="vencimento" [ngModel]="titulo.vencimento | date:'yyyy-MM-dd'" (ngModelChange)="titulo.vencimento = $event" required class="input" type="date" placeholder="Vencimento">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Descrição</label>
+      <div class="control">
+        <input name="descricao" [(ngModel)]="titulo.descricao" required class="input" type="text" placeholder="Descrição">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Valor R$</label>
+      <div class="control">
+        <input name="valor" [(ngModel)]="titulo.valor" required class="input" type="number" step="0.01" placeholder="Valor R$">
+      </div>
+    </div>
+<!--
+    <div class="field">
+      <label class="label">Categoria</label>
+      <div class="control select">
+        <select v-model="titulo.categoria">
+          <option v-bind:value="categoria" v-for="categoria in categorias" :key="categoria.id">{{ categoria.descricao }}</option>
+        </select>
+      </div>
+    </div>
+
+
+    <div class="field">
+      SelectConta @contaSelecionada="handleContaSelecionada" :operacao="operacao"/>
+    </div>
+
+    <div class="field">
+      <label class="label">Subcategoria</label>
+      <div class="control select">
+        <select v-model="titulo.subcategoria">
+          <option v-bind:value="subcategoria" v-for="subcategoria in subCategorias" :key="subcategoria.id"> subcategoria.descricao }}</option>
+        </select>
+      </div>
+    </div>-->
+
+    <div class="columns">
+      <div class="column">
+        <button *ngIf="conta !== null" (click)="efetivar()" class="button is-success mr-1">{{titulo.operacao}}</button>
+        <button *ngIf="conta === null" (click)="agendar()" class="button is-info mr-1">Agendar this.conta}}</button>
+      </div>
+      <div class="column">
+        <button routerLink = "/" class="button is-warning is-pulled-right mr-3"> Cancelar </button>
+      </div>
+    </div>
+  </form>
+</div>

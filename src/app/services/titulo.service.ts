@@ -17,6 +17,23 @@ export class TituloService {
 
   constructor(  private http: HttpClient) {  }
 
+  buscarTitulo(id: string): Observable<Titulo> {
+    const tit: Titulo | undefined = this.titulos$.value.data.find((e: Titulo) => e.id === id);
+    if(tit) {
+      return new BehaviorSubject(tit);
+    }
+
+    const url = `${HttpConfig.url}/titulo/${id}`;
+    const tituloObs: Observable<Titulo> = this.http.get<Titulo>(url, {headers: HttpConfig.getHeader()});
+    tituloObs.subscribe((t: Titulo) => {
+      this.titulos$.value.data.push(t);
+      this.titulos$.value.total++;
+      this.titulos$.next(this.titulos$.value);
+    });
+
+    return tituloObs;
+  }
+
   buscarTitulos(page: number): Observable<ResponseQuery<Titulo>> {
     const url = `${HttpConfig.url}/query/TitulosAgendadosDescricaoValorVencimentoOperacao/${page}`;
     return this.http.post<ResponseQuery<Titulo>>(url,{}, {headers: HttpConfig.getHeader()});

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, Input, OnInit } from '@angular/core';
+import OperacaoTitulo from 'src/app/models/enum/OperacaoTitulo';
 @Component({
   selector: 'app-pagar',
   templateUrl: './pagar.component.html',
@@ -7,6 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PagarComponent {
 
-  constructor() { }
+  operacao = OperacaoTitulo.PAGAR;
 
 }

@@ -8,7 +8,9 @@
   <h3 class="has-text-centered"><b>Títulos Agendados</b></h3>
   <h3 class="has-text-centered">{{titulos.length}}/{{titulosTotal}}</h3>
 
-  <div *ngFor="let titulo of titulos; index as i" [ngClass]="i  % 2 === 0 ? 'listrado' : ''">
+  <div *ngFor="let titulo of titulos; index as i"
+    [ngClass]="i  % 2 === 0 ? 'listrado' : ''"
+    routerLink={{obterUrlEdicao(titulo)}}>
     <h3 class="is-12">{{ titulo.descricao }}</h3>
     <div class="columns is-mobile" >
       <span class="column has-text-left">{{titulo.vencimento | date:"dd/MM/yyyy"}}</span>

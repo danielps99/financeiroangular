@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import OperacaoTitulo from 'src/app/models/enum/OperacaoTitulo';
 
 @Component({
   selector: 'app-receber',
@@ -7,6 +8,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReceberComponent {
 
-  constructor() { }
+  operacao = OperacaoTitulo.RECEBER;
 
 }

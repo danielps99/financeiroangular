@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import OperacaoTitulo from 'src/app/models/enum/OperacaoTitulo';
 import { TituloService } from 'src/app/services/titulo.service';
 import Titulo from '../../models/Titulo';
 import { isBottomOfWindow } from '../../shared/UtilWindow';
@@ -25,6 +26,11 @@ export class HomeComponent implements OnInit {
         this.titulosTotal = r.total;
       }
     );
+  }
+
+
+  public obterUrlEdicao(titulo: Titulo) {
+    return `/${titulo.operacao.toLowerCase()}/${titulo.id}`;
   }
 
   @HostListener('window:scroll', [])
