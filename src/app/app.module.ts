@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -11,8 +12,7 @@ import { PagarParceladoComponent } from './pages/pagar-parcelado/pagar-parcelado
 import { ReceberComponent } from './pages/receber/receber.component';
 import { ReceberParceladoComponent } from './pages/receber-parcelado/receber-parcelado.component';
 import { ConfiguracaoComponent } from './pages/configuracao/configuracao.component';
-import { TituloPresenteComponent } from './src/app/shared/components/titulo-presente/titulo-presente.component';
-import { FormsModule } from '@angular/forms';
+import { TituloPresenteComponent } from './shared/components/titulo-presente/titulo-presente.component';
 
 @NgModule({
   declarations: [
