@@ -1,6 +1,6 @@
 import OperacaoTitulo from './enum/OperacaoTitulo';
 import Categoria from './Categoria';
-import SubCategoria from './SubCategoria';
+import Subcategoria from './Subcategoria';
 
 export default interface ITitulo {
   id: string;
@@ -11,7 +11,7 @@ export default interface ITitulo {
   vencimento:  Date;
   operacao: OperacaoTitulo;
   categoria: Categoria | null;
-  subcategoria: SubCategoria | null;
+  subcategoria: Subcategoria | null;
 }
 
 export default class Titulo implements ITitulo {
@@ -26,5 +26,5 @@ export default class Titulo implements ITitulo {
     this.operacao = operacao;
     this.categoria = null;
     this.subcategoria = null;
-  }    
+  }
 }
